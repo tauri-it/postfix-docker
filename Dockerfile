@@ -4,8 +4,9 @@ ENV POST_PORT ""
 ENV HOSTNAME ""
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && apt-get install -y --no-install-recommends\
+    apt-get update && apt-get install -y\
     postfix \
+	ssmtp \
     mailutils && \
     apt-get autoremove
 
